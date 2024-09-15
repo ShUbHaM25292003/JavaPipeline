@@ -12,14 +12,14 @@ pipeline {
         stage('Compile') {
             steps {
                 // Compile the Java code
-                sh 'javac src/Main.java'
+                bat 'javac src/Main.java'
             }
         }
         
         stage('Run') {
             steps {
                 // Run the Java program
-                sh 'java -cp src Main'
+                bat 'java -cp src Main'
             }
         }
     }
